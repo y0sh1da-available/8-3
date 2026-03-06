@@ -51,14 +51,14 @@ function updateStars() {
 const button = document.getElementById("valentinesButton");
 
 button.addEventListener("click", () => {
-  if (button.textContent === "Click Me! ❤") {
+  if (button.textContent === "Click if you love me") {
     button.textContent = "loading...";
     fetch('send_mail.php')
       .then(response => {
         if (response.ok) {
-          button.textContent = "Check Your Email 🙃";
+          button.textContent = "I love you too 💗";
         } else {
-          console.error('Failed to send email');
+          console.error('Failed');
           button.textContent = "Error 😞";
         }
       })
